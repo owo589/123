@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>晴日生活有限公司｜智能客服</title>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: system-ui, "Microsoft JhengHei", sans-serif;
+      background: #f6f8fb;
+      color: #253047;
+    }
+
+    main {
+      max-width: 760px;
+      margin: 12vh auto;
+      padding: 24px;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: clamp(28px, 5vw, 42px);
+      color: #3569b5;
+    }
+
+    p {
+      line-height: 1.8;
+    }
+
+    .hint {
+      color: #536276;
+    }
+
+    .info {
+      margin-top: 30px;
+      padding: 24px;
+      background: #ffffff;
+      border-radius: 16px;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.05);
+      text-align: left;
+    }
+
+    df-messenger {
+      --df-messenger-bot-message: #e8eefc;
+      --df-messenger-button-titlebar-color: #3569b5;
+      --df-messenger-chat-background-color: #ffffff;
+      --df-messenger-font-color: #253047;
+      --df-messenger-send-icon: #3569b5;
+      --df-messenger-user-message: #d6e7ff;
+    }
+  </style>
+</head>
+
+<body>
+  <main>
+    <h1>晴日生活有限公司</h1>
+
+    <p>您好！歡迎來到晴日生活智能客服。</p>
+
+    <p class="hint">
+      點選右下角聊天圖示，即可與智能客服對話。
+      我們將協助您解決商品、訂單及售後服務相關問題。
+    </p>
+
+    <div class="info">
+      <h2>客服服務項目</h2>
+      <p>🛍️ 商品資訊與諮詢</p>
+      <p>📦 訂單及配送查詢</p>
+      <p>🔄 退貨與換貨服務</p>
+      <p>🕒 營業時間查詢</p>
+      <p>☎️ 聯絡客服資訊</p>
+    </div>
+  </main>
+
+  <!-- Google Dialogflow Messenger -->
+  <script src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1"></script>
+
+  <df-messenger
+    intent="WELCOME"
+    chat-title="晴日生活有限公司"
+    agent-id="74601af2-0766-4646-bced-c76a57904d52"
+    language-code="zh-tw">
+  </df-messenger>
+
+</body>
+</html>
